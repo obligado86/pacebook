@@ -37,7 +37,8 @@ function userConstruction(userfirstName, userlastName, useremail, userpassword, 
 	let newId = users.length + 1;
 	let userAccount = new User(newId, userfirstName, userlastName, useremail, userpassword, userbirthMonth, userbirthDay, userbirthYear, usergender);
 	console.log(users.push(userAccount));
-	alert("Thank you for signing up! You can now log in with your user email and password");
+	//alert("Thank you for signing up! You can now log in with your user email and password");
+	alert("your account suppose to be registered but this is only a site test. you can log in as visitor and see my portfolio. login with my account \"obligado86@yahoo.com\" as email and a password \"12345\"")
 }
 
 /* ============================================================================================================ */
@@ -58,7 +59,8 @@ signUpForm.addEventListener('submit', function(event) {
 		let infoCheck = signinCheck(inputemail, inputfirstName, inputlastName);
 
 		if (infoCheck === true) {
-			alert("Your email is already been registered!");
+			//alert("Your email is already been registered!");
+
 		} else {
 			let newUser = userConstruction(inputfirstName, inputlastName, inputemail, inputpassword, inputbirthMonth, inputbirthDay, inputbirthYear, inputgender);
 			return newUser;

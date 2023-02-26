@@ -25,11 +25,12 @@ loginForm.addEventListener('submit', function(event) {
 	let validUser = loginCheck(mail, pass);
 
 	if (validUser === true) {
-		let transfer = redirect("./templates/misc/index.html");
+		let transfer = redirect("https://obligado86.github.io/project-portfolio/#projects");
+		console.log(transfer);
 		alert("Welcome back");
-		return transfer;
 	} else {
-		alert("invalid email and password");
+		//alert("invalid email and password");
+		alert("invalid email and password you may log in as visitor with my account \"obligado86@yahoo.com\" as email and \"12345\" for password");
 	}
 })
 
@@ -46,9 +47,11 @@ mobileLoginForm.addEventListener('submit', function(event) {
 	let validMobUser = loginCheck(mobMail, mobPass);
 
 	if (validMobUser === true) {
-		window.location.href = "./templates/misc/index.html";
+		let directTo = redirect("https://obligado86.github.io/project-portfolio/#projects");
+		conolle.log(directTo);
 		alert("Welcome back");
 	} else {
-		alert("invalid email and password");
+		//alert("invalid email and password");
+		alert("invalid email and password you may log in as visitor with my account \"obligado86@yahoo.com\" as email and \"12345\" for password");
 	}
 })
