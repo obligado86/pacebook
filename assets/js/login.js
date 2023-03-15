@@ -19,6 +19,7 @@ for(let i = 0; i < users.length; i++) {
 let loginForm = document.getElementById("loginUser");
 
 loginForm.addEventListener('submit', function(event) {
+	event.preventDefault()
 	let mail = loginForm.loginEmail.value;
 	let pass = loginForm.loginPassword.value;
 
@@ -29,8 +30,7 @@ loginForm.addEventListener('submit', function(event) {
 		console.log(transfer);
 		alert("Welcome back");
 	} else {
-		//alert("invalid email and password");
-		alert("invalid email and password you may log in as visitor with my account \"obligado86@yahoo.com\" as email and \"12345\" for password");
+		alert("invalid email and password");
 	}
 })
 
@@ -41,6 +41,7 @@ loginForm.addEventListener('submit', function(event) {
 let mobileLoginForm = document.getElementById("mobileLoginUser");
 
 mobileLoginForm.addEventListener('submit', function(event) {
+	event.preventDefault();
 	let mobMail = mobileLoginForm.mobLoginEmail.value;
 	let mobPass = mobileLoginForm.mobLoginPassword.value;
 
@@ -51,7 +52,6 @@ mobileLoginForm.addEventListener('submit', function(event) {
 		conolle.log(directTo);
 		alert("Welcome back");
 	} else {
-		//alert("invalid email and password");
-		alert("invalid email and password you may log in as visitor with my account \"obligado86@yahoo.com\" as email and \"12345\" for password");
+		alert("invalid email and password");
 	}
 })

@@ -36,9 +36,8 @@ for(let i = 0; i < users.length; i++) {
 function userConstruction(userfirstName, userlastName, useremail, userpassword, userbirthMonth, userbirthDay, userbirthYear, usergender) {
 	let newId = users.length + 1;
 	let userAccount = new User(newId, userfirstName, userlastName, useremail, userpassword, userbirthMonth, userbirthDay, userbirthYear, usergender);
-	console.log(users.push(userAccount));
-	//alert("Thank you for signing up! You can now log in with your user email and password");
-	alert("your account suppose to be registered but this is only a site test. you can log in as visitor and see my portfolio. login with my account \"obligado86@yahoo.com\" as email and a password \"12345\"")
+	users.push(userAccount);
+	alert("Thank you for signing up! You can now log in with your user email and password");
 }
 
 /* ============================================================================================================ */
@@ -47,6 +46,7 @@ function userConstruction(userfirstName, userlastName, useremail, userpassword, 
 let signUpForm = document.getElementById("userSignUp");
 
 signUpForm.addEventListener('submit', function(event) {
+	event.preventDefault();
 		let inputfirstName = signUpForm.firstName.value;
 		let inputlastName = signUpForm.lastName.value;
 		let inputemail = signUpForm.email.value;
@@ -59,7 +59,7 @@ signUpForm.addEventListener('submit', function(event) {
 		let infoCheck = signinCheck(inputemail, inputfirstName, inputlastName);
 
 		if (infoCheck === true) {
-			//alert("Your email is already been registered!");
+			alert("Your email is already been registered!");
 
 		} else {
 			let newUser = userConstruction(inputfirstName, inputlastName, inputemail, inputpassword, inputbirthMonth, inputbirthDay, inputbirthYear, inputgender);
